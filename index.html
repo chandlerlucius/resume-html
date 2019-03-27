@@ -2,228 +2,405 @@
 <html lang="en">
 
 <head>
-	<title>Resume for Chandler Lucius</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="author" content="Chandler Lucius">
-	<meta name="description" content="Resume for Chandler Lucius">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="theme-color" content="#353439">
+    <title>Resume for Chandler Lucius</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Chandler Lucius">
+    <meta name="description" content="Resume for Chandler Lucius">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#353439">
 
-	<link rel="stylesheet" href="../css/resume.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <style>
+        @page {
+            size: letter;
+            margin: 0;
+        }
+
+        @media print {
+            #content {
+                width: 215mm;
+                height: 279mm;
+                margin: 0;
+            }
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+            min-width: 100%;
+            -webkit-print-color-adjust: exact !important;
+        }
+
+        * {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 200;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .flex {
+            display: flex;
+            height: 100%;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-transform: uppercase;
+        }
+
+        hr {
+            background: #888888;
+            border: 0;
+            height: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        #container {
+            margin: 50px;
+        }
+
+        .grid-2x4 {
+            display: grid;
+            align-items: center;
+            justify-items: start;
+            grid-template-columns: 1fr 15fr;
+        }
+
+        #content {
+            width: 215mm;
+            height: 279mm;
+            margin: auto;
+            box-shadow: 0 0 50px #000000;
+            overflow: hidden;
+        }
+
+        #info-content,
+        #main-content,
+        #sidebar-content {
+            padding: 20px;
+        }
+
+        #info-content {
+            color: #FFFFFF;
+            background: rgba(45, 45, 45, 1);
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #info-content>h1 {
+            margin: 0px;
+        }
+
+        #main-content {
+            width: 70%;
+            height: 100%;
+        }
+
+        #main-content>h5 {
+            text-align: justify;
+            margin: 0;
+        }
+
+        #sidebar-content {
+            width: 30%;
+            height: 100%;
+            border-left: 1px solid;
+            text-transform: lowercase;
+        }
+
+        #sidebar-content>h3 {
+            border-bottom: 2px solid;
+            text-align: right;
+        }
+
+        #sidebar-content>ul {
+            padding-left: 1em;
+            list-style-type: none;
+        }
+
+        #sidebar-content>ul,
+        .contact-content>a {
+            opacity: 0.6;
+            font-style: italic;
+            margin: 0 0 10px 0;
+        }
+
+        #sidebar-content h4 {
+            margin: 0;
+        }
+
+        #title-content {
+            height: 20%;
+            width: 100%;
+            align-items: center;
+        }
+
+        #photo {
+            height: 75%;
+            padding-right: 20px;
+        }
+
+        #line-content {
+            width: 1em;
+            height: 100%;
+            border-bottom: 1px solid #888888;
+            border-top: 1px solid #888888;
+        }
+
+        #detail-content {
+            display: flex;
+            width: 100%;
+        }
+
+        #detail-content>div:first-child {
+            padding-right: 20px;
+        }
+
+        #detail-content>div>h4 {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        #detail-content>div>h5 {
+            margin: 0;
+            text-align: justify;
+        }
+
+        #detail-content>div>ul {
+            padding-left: 15px;
+            margin: 0;
+            padding-bottom: 15px;
+        }
+
+        #detail-content>div>ul h5 {
+            margin: 0;
+            padding-bottom: 5px;
+            text-align: justify;
+        }
+    </style>
 </head>
 
 <body>
-	<div id="content">
-		<div id="info-content">
-			<h1>Chandler Lucius</h1>
-			<span>Software Developer</span>
-		</div>
-		<div class="flex">
-			<div id="main-content">
-				<h5>Software dev with 6 years of experience in multiple Java based environments.
-					Interested mostly in Java web based systems, but enjoy learning new tools
-					and languages when the oppurtunities present themselves.</h5>
-				<div class="grid-2x4">
-					<i class=""></i>
-					<h3>Work Experience</h3>
-					<div id="line-content">
-						<hr width="1">
-					</div>
-					<div id="detail-content">
-						<div>
-							<h5>01/2016</h5>
-							<h5>-</h5>
-							<h5>Present</h5>
-						</div>
-						<div>
-							<h4>Prelude Dynamics</h4>
-							<h5>Software Engineer</h5>
-							<br>
-							<ul>
-								<li>
-									<h5>
-										Fixed bugs and added features to an EDC (Electronic Data Capture) system known
-										as Vision.
-										The stack consisted of a JSP/HTML mixed frontend, a Java backend, and an
-										in-memory
-										Java database persisted in XML files on disk.
-									</h5>
-								</li>
-								<li>
-									<h5>
-										Responsible for updating the user experience of Vision as well as fixing any bugs found.
-										Also worked on dev ops related tasks involving configuring linux servers and
-										writing bash scripts to display server information for system maintenance /
-										perfomance.
-									</h5>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div id="line-content">
-						<hr width="1">
-					</div>
-					<div id="detail-content">
-						<div>
-							<h5>08/2014</h5>
-							<h5>-</h5>
-							<h5>01/2016</h5>
-						</div>
-						<div>
-							<h4>InnoWake</h4>
-							<h5>Software Developer</h5>
-							<br>
-							<ul>
-								<li>
-									<h5>
-										Migrated certain TxDMV systems from a legacy (COBOL / ADABASE) mainframe
-										environment
-										to an HTML frontend, a Java backend, and SQL database.
-									</h5>
-								</li>
-								<li>
-									<h5>
-										Responsible for converting jobs from COBOL to Java, one long running project
-										being the conversion
-										of batch printing related processes such as titles, reports, and other misc
-										articles.
-									</h5>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div id="line-content">
-						<hr width="1">
-					</div>
-					<div id="detail-content">
-						<div>
-							<h5>08/2014</h5>
-							<h5>-</h5>
-							<h5>08/2013</h5>
-						</div>
-						<div>
-							<h4>Accenture</h4>
-							<h5>Java Developer</h5>
-							<br>
-							<ul>
-								<li>
-									<h5>
-										Improved the correspondence for the Welfare system of LA County known as the
-										Leader Replacement System.
-										The stack consisted of a JSP frontend, a Java backend, and SQL database.
-									</h5>
-								</li>
-								<li>
-									<h5>
-										Responsible for upgrading a Struts Framework to a Spring Framework and writing
-										SQL
-										scripts for storing valid form information in a SQL database.
-									</h5>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div id="line-content">
-						<hr width="1">
-					</div>
-					<div id="detail-content">
-						<div>
-							<h5>05/2012</h5>
-							<h5>-</h5>
-							<h5>08/2013</h5>
-						</div>
-						<div>
-							<h4>Sun West Mortgage Company</h4>
-							<h5>Software Engineer</h5>
-							<br>
-						</div>
-					</div>
-				</div>
-				<div class="grid-2x4">
-					<i class=""></i>
-					<h3>Education</h3>
-					<div id="line-content">
-						<hr width="1">
-					</div>
-					<div id="detail-content">
-						<div>
-							<h5>08/2008</h5>
-							<h5>-</h5>
-							<h5>05/2012</h5>
-						</div>
-						<div>
-							<h4>Baylor University</h4>
-							<h5>B.S. Computer and Electrical Engineering</h5>
-							<br>
-							<h5>Minors (2): Computer Science, Math</h5>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="sidebar-content">
-				<h3>Contact</h3>
-				<div class="grid-2x4 contact-content">
-					<h4>Email</h4>
-					<br>
-					<a href="mailto:clucius@chandlerlucius.com" target="_blank">clucius@chandlerlucius.com</a>
-				</div>
-				<div class="grid-2x4 contact-content">
-					<h4>Linked In</h4>
-					<br>
-					<a href="https://www.linkedin.com/in/chandlerlucius"
-						target="_blank">linkedin.com/in/chandlerlucius</a>
-				</div>
-				<h3>Projects</h3>
-				<div class="grid-2x4 contact-content">
-					<h4>Website</h4>
-					<br>
-					<a href="http://www.chandlerlucius.com" target="_blank">chandlerlucius.com</a>
-				</div>
-				<div class="grid-2x4 contact-content">
-					<h4>Github</h4>
-					<br>
-					<a href="https://www.github.com/chandlerlucius" target="_blank">github.com/chandlerlucius</a>
-				</div>
-				<h3>Skills</h3>
-				<h4>Languages</h4>
-				<ul>
-					<li>Java</li>
-					<li>Bash</li>
-				</ul>
-				<h4>Web Development</h4>
-				<ul>
-					<li>HTML5</li>
-					<li>CSS3</li>
-					<li>JavaScript</li>
-					<li>JQuery</li>
-					<li>Spring/Spring Boot</li>
-					<li>JSP</li>
-				</ul>
-				<h4>Control/Build/Deploy Tools</h4>
-				<ul>
-					<li>Git</li>
-					<li>Maven</li>
-					<li>Ant</li>
-					<li>Tomcat</li>
-					<li>Jenkins</li>
-					<li>Github/Gitlab</li>
-				</ul>
-				<h4>Dev Ops</h4>
-				<ul>
-					<li>Linux CLI</li>
-					<li>Basic Server Config (linux)</li>
-					<li>Basic Security Config (http2/ciphers/certs)</li>
-				</ul>
-				<h4>Testing</h4>
-				<ul>
-					<li>JUnit</li>
-					<li>Selenium</li>
-				</ul>
-			</div>
-		</div>
-	</div>
+    <div id="content">
+        <div id="info-content">
+            <h1>Chandler Lucius</h1>
+            <span>Software Developer</span>
+        </div>
+        <div class="flex">
+            <div id="main-content">
+                <h5>Software dev with 6 years of experience in multiple Java based environments.
+                    Interested mostly in Java web based systems, but enjoy learning new tools
+                    and languages when the oppurtunities present themselves.</h5>
+                <div class="grid-2x4">
+                    <i class=""></i>
+                    <h3>Work Experience</h3>
+                    <div id="line-content">
+                        <hr width="1">
+                    </div>
+                    <div id="detail-content">
+                        <div>
+                            <h5>01/2016</h5>
+                            <h5>-</h5>
+                            <h5>Present</h5>
+                        </div>
+                        <div>
+                            <h4>Prelude Dynamics</h4>
+                            <h5>Software Engineer</h5>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5>
+                                        Fixed bugs and added features to an EDC (Electronic Data Capture) system known
+                                        as Vision.
+                                        The stack consisted of a JSP/HTML mixed frontend, a Java backend, and an
+                                        in-memory
+                                        Java database persisted in XML files on disk.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>
+                                        Responsible for updating the user experience of Vision as well as fixing any
+                                        bugs found.
+                                        Also worked on dev ops related tasks involving configuring linux servers and
+                                        writing bash scripts to display server information for system maintenance /
+                                        perfomance.
+                                    </h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="line-content">
+                        <hr width="1">
+                    </div>
+                    <div id="detail-content">
+                        <div>
+                            <h5>08/2014</h5>
+                            <h5>-</h5>
+                            <h5>01/2016</h5>
+                        </div>
+                        <div>
+                            <h4>InnoWake</h4>
+                            <h5>Software Developer</h5>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5>
+                                        Migrated certain TxDMV systems from a legacy (COBOL / ADABASE) mainframe
+                                        environment
+                                        to an HTML frontend, a Java backend, and SQL database.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>
+                                        Responsible for converting jobs from COBOL to Java, one long running project
+                                        being the conversion
+                                        of batch printing related processes such as titles, reports, and other misc
+                                        articles.
+                                    </h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="line-content">
+                        <hr width="1">
+                    </div>
+                    <div id="detail-content">
+                        <div>
+                            <h5>08/2014</h5>
+                            <h5>-</h5>
+                            <h5>08/2013</h5>
+                        </div>
+                        <div>
+                            <h4>Accenture</h4>
+                            <h5>Java Developer</h5>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5>
+                                        Improved the correspondence for the Welfare system of LA County known as the
+                                        Leader Replacement System.
+                                        The stack consisted of a JSP frontend, a Java backend, and SQL database.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>
+                                        Responsible for upgrading a Struts Framework to a Spring Framework and writing
+                                        SQL
+                                        scripts for storing valid form information in a SQL database.
+                                    </h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="line-content">
+                        <hr width="1">
+                    </div>
+                    <div id="detail-content">
+                        <div>
+                            <h5>05/2012</h5>
+                            <h5>-</h5>
+                            <h5>08/2013</h5>
+                        </div>
+                        <div>
+                            <h4>Sun West Mortgage Company</h4>
+                            <h5>Software Engineer</h5>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-2x4">
+                    <i class=""></i>
+                    <h3>Education</h3>
+                    <div id="line-content">
+                        <hr width="1">
+                    </div>
+                    <div id="detail-content">
+                        <div>
+                            <h5>08/2008</h5>
+                            <h5>-</h5>
+                            <h5>05/2012</h5>
+                        </div>
+                        <div>
+                            <h4>Baylor University</h4>
+                            <h5>B.S. Computer and Electrical Engineering</h5>
+                            <br>
+                            <h5>Minors (2): Computer Science, Math</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar-content">
+                <h3>Contact</h3>
+                <div class="grid-2x4 contact-content">
+                    <h4>Email</h4>
+                    <br>
+                    <a href="mailto:clucius@chandlerlucius.com" target="_blank">clucius@chandlerlucius.com</a>
+                </div>
+                <div class="grid-2x4 contact-content">
+                    <h4>Linked In</h4>
+                    <br>
+                    <a href="https://www.linkedin.com/in/chandlerlucius"
+                        target="_blank">linkedin.com/in/chandlerlucius</a>
+                </div>
+                <h3>Projects</h3>
+                <div class="grid-2x4 contact-content">
+                    <h4>Website</h4>
+                    <br>
+                    <a href="http://www.chandlerlucius.com" target="_blank">chandlerlucius.com</a>
+                </div>
+                <div class="grid-2x4 contact-content">
+                    <h4>Github</h4>
+                    <br>
+                    <a href="https://www.github.com/chandlerlucius" target="_blank">github.com/chandlerlucius</a>
+                </div>
+                <h3>Skills</h3>
+                <h4>Languages</h4>
+                <ul>
+                    <li>Java</li>
+                    <li>Bash</li>
+                </ul>
+                <h4>Web Development</h4>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>JQuery</li>
+                    <li>Spring/Spring Boot</li>
+                    <li>JSP</li>
+                </ul>
+                <h4>Control/Build/Deploy Tools</h4>
+                <ul>
+                    <li>Git</li>
+                    <li>Maven</li>
+                    <li>Ant</li>
+                    <li>Tomcat</li>
+                    <li>Jenkins</li>
+                    <li>Github/Gitlab</li>
+                </ul>
+                <h4>Dev Ops</h4>
+                <ul>
+                    <li>Linux CLI</li>
+                    <li>Basic Server Config (linux)</li>
+                    <li>Basic Security Config (http2/ciphers/certs)</li>
+                </ul>
+                <h4>Testing</h4>
+                <ul>
+                    <li>JUnit</li>
+                    <li>Selenium</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
