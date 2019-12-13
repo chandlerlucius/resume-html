@@ -46,17 +46,6 @@
             color: inherit;
         }
 
-        .flex {
-            display: flex;
-            height: 100%;
-        }
-
-        h1,
-        h2,
-        h3 {
-            text-transform: uppercase;
-        }
-
         hr {
             background: #888888;
             border: 0;
@@ -65,8 +54,19 @@
             margin-bottom: 0;
         }
 
-        #container {
-            margin: 50px;
+        h1,
+        h2,
+        h3 {
+            text-transform: uppercase;
+        }
+
+        h4,h5 {
+            text-align: justify;
+            margin: 0;
+        }
+
+        h5 {
+            padding-bottom: 5px;
         }
 
         .grid-2x4 {
@@ -98,17 +98,19 @@
         }
 
         #info-content>h1 {
-            margin: 0px;
+            margin: 0;
+        }
+
+        #container {
+            display: flex;
+            height: 100%;
         }
 
         #main-content {
             width: 70%;
             height: 100%;
-        }
-
-        #main-content>h5 {
-            text-align: justify;
-            margin: 0;
+            padding-top: 0;
+            padding-bottom: 0;
         }
 
         #sidebar-content {
@@ -130,63 +132,45 @@
         }
 
         #sidebar-content>ul,
-        .contact-content>a {
+        a {
             opacity: 0.6;
             font-style: italic;
+            white-space: nowrap;
             margin: 0 0 10px 0;
         }
 
-        #sidebar-content h4 {
-            margin: 0;
-        }
-
-        #title-content {
-            height: 20%;
-            width: 100%;
-            align-items: center;
-        }
-
-        #photo {
-            height: 75%;
-            padding-right: 20px;
-        }
-
-        #line-content {
+        .line-content {
             width: 1em;
             height: 100%;
-            border-bottom: 1px solid #888888;
-            border-top: 1px solid #888888;
+            border-bottom: 2px solid #888888;
+        }
+        
+        .grid-2x4 div:nth-child(3) {
+            border-top: 2px solid #888888;
         }
 
-        #detail-content {
+        .detail-content {
             display: flex;
             width: 100%;
         }
 
-        #detail-content>div:first-child {
-            padding-right: 20px;
+        .detail-content>div:nth-child(2) {
+            flex: 90%;
+            padding-left: 20px;
         }
 
-        #detail-content>div>h4 {
+        .detail-content>div>h4 {
             font-weight: bold;
-            margin: 0;
         }
 
-        #detail-content>div>h5 {
-            margin: 0;
-            text-align: justify;
-        }
-
-        #detail-content>div>ul {
+        .detail-content>div>ul {
             padding-left: 15px;
             margin: 0;
             padding-bottom: 15px;
         }
 
-        #detail-content>div>ul h5 {
-            margin: 0;
-            padding-bottom: 5px;
-            text-align: justify;
+        .detail-content:last-child>div>ul {
+            padding-bottom: 0;
         }
     </style>
 </head>
@@ -197,18 +181,70 @@
             <h1>Chandler Lucius</h1>
             <span>Software Developer</span>
         </div>
-        <div class="flex">
+        <div id="container">
             <div id="main-content">
-                <h5>Software dev with 7+ years of experience in multiple Java based environments.
-                    Interested mostly in Java web based systems, but enjoys learning new tools
-                    and languages when the oppurtunities present themselves.</h5>
                 <div class="grid-2x4">
-                    <i class=""></i>
-                    <h3>Work Experience</h3>
-                    <div id="line-content">
+                    <div></div>
+                    <h3>Projects</h3>
+                    <div class="line-content">
                         <hr width="1">
                     </div>
-                    <div id="detail-content">
+                    <div class="detail-content">
+                        <div>
+                            <h5>Proprietary</h5>
+                        </div>
+                        <div>
+                            <h4>Odysi</h4>
+                            <a href="https://www.myodysi.com" target="_blank">myodysi.com</a>
+                            <ul>
+                                <li>
+                                    <h5>Plan, track, and journal your favorite adventures.</h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line-content">
+                        <hr width="1">
+                    </div>
+                    <div class="detail-content">
+                        <div>
+                            <h5>Open Source</h5>
+                        </div>
+                        <div>
+                            <h4>Linux Dashboard</h4>
+                            <a href="https://www.linuxdashboard.com:8443" target="_blank">linuxdashboard.com</a>
+                            <ul>
+                                <li>
+                                    <h5>Simple, fast, server analytics.</h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line-content">
+                        <hr width="1">
+                    </div>
+                    <div class="detail-content">
+                        <div>
+                            <h5>Open Source</h5>
+                        </div>
+                        <div>
+                            <h4>Personal Website Template</h4>
+                            <a href="https://www.chandlerlucius.com" target="_blank">chandlerlucius.com</a>
+                            <ul>
+                                <li>
+                                    <h5>Showcase your resume in website form.</h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid-2x4">
+                    <div></div>
+                    <h3>Experience</h3>
+                    <div class="line-content">
+                        <hr width="1">
+                    </div>
+                    <div class="detail-content">
                         <div>
                             <h5>Present</h5>
                             <h5>-</h5>
@@ -216,114 +252,81 @@
                         </div>
                         <div>
                             <h4>Prelude Dynamics</h4>
-                            <h5>Software Engineer</h5>
-                            <br>
+                            <a>Software Engineer</a>
                             <ul>
                                 <li>
                                     <h5>
-                                        Fixed bugs and added features to an EDC (Electronic Data Capture) system known
-                                        as Vision.
-                                        The stack consisted of a JSP/HTML mixed frontend, a Java backend, and an
-                                        in-memory
-                                        Java database persisted in XML files on disk.
+                                        Implemented an archiving tool in Java to capture a flat file example of our application during runtime. Following user interaction the tool would capture the result of each cached request path, store it in an html representation, and bundle it with the necessary resources in a zip file in it's own thread.
                                     </h5>
                                 </li>
                                 <li>
                                     <h5>
-                                        Responsible for dev ops related tasks involving configuring linux servers and
-                                        writing bash scripts to display server information for system maintenance /
-                                        perfomance.
+                                        Increased the speed, performance, and robustness of testing suite by introducing embedded tomcat, overriding selenium/htmlunit drivers, adding 20% more tests, and refactoring entire suite.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>
+                                        Created a series of bash script/cron jobs to monitor production servers. The scripts aggregated various linux, tomcat, java, and backup analytics in a json format.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>
+                                        Developed a process to prepare multiple production linux servers running tomcat web applications from the ground up.
                                     </h5>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div id="line-content">
+                    <div class="line-content">
                         <hr width="1">
                     </div>
-                    <div id="detail-content">
+                    <div class="detail-content">
                         <div>
                             <h5>01/2016</h5>
                             <h5>-</h5>
-                            <h5>08/2014</h5>
+                            <h5>09/2014</h5>
                         </div>
                         <div>
                             <h4>InnoWake</h4>
-                            <h5>Software Developer</h5>
-                            <br>
-                            <ul>
-                                <li>
-                                    <h5>
-                                        Migrated certain TxDMV systems from a legacy (COBOL / ADABASE) mainframe
-                                        environment
-                                        to an HTML frontend, a Java backend, and SQL database.
-                                    </h5>
-                                </li>
-                                <li>
-                                    <h5>
-                                        Responsible for converting jobs from COBOL to Java. One long running project
-                                        being the conversion
-                                        of batch printing related processes such as titles, reports, and other misc
-                                        articles.
-                                    </h5>
-                                </li>
-                            </ul>
+                            <a>Software Developer</a>
                         </div>
                     </div>
-                    <div id="line-content">
+                    <div class="line-content">
                         <hr width="1">
                     </div>
-                    <div id="detail-content">
+                    <div class="detail-content">
                         <div>
                             <h5>08/2014</h5>
                             <h5>-</h5>
-                            <h5>08/2013</h5>
+                            <h5>09/2013</h5>
                         </div>
                         <div>
                             <h4>Accenture</h4>
-                            <h5>Java Developer</h5>
-                            <br>
-                            <ul>
-                                <li>
-                                    <h5>
-                                        Improved the correspondence for the Welfare system of LA County known as the
-                                        Leader Replacement System.
-                                        The stack consisted of a JSP frontend, a Java backend, and SQL database.
-                                    </h5>
-                                </li>
-                                <li>
-                                    <h5>
-                                        Responsible for upgrading a Struts Framework to a Spring Framework and writing
-                                        SQL
-                                        scripts for storing valid form information in a SQL database.
-                                    </h5>
-                                </li>
-                            </ul>
+                            <a>Java Developer</a>
                         </div>
                     </div>
-                    <div id="line-content">
+                    <div class="line-content">
                         <hr width="1">
                     </div>
-                    <div id="detail-content">
+                    <div class="detail-content">
                         <div>
                             <h5>08/2013</h5>
                             <h5>-</h5>
-                            <h5>05/2012</h5>
+                            <h5>06/2012</h5>
                         </div>
                         <div>
                             <h4>Sun West Mortgage Company</h4>
-                            <h5>Software Engineer</h5>
-                            <br>
+                            <a>Software Engineer</a>
                         </div>
                     </div>
                 </div>
                 <div class="grid-2x4">
-                    <i class=""></i>
+                    <div></div>
                     <h3>Education</h3>
-                    <div id="line-content">
+                    <div class="line-content">
                         <hr width="1">
                     </div>
-                    <div id="detail-content">
+                    <div class="detail-content">
                         <div>
                             <h5>05/2012</h5>
                             <h5>-</h5>
@@ -331,8 +334,7 @@
                         </div>
                         <div>
                             <h4>Baylor University</h4>
-                            <h5>B.S. Computer and Electrical Engineering</h5>
-                            <br>
+                            <a>B.S. Computer and Electrical Engineering</a>
                             <h5>Minors (2): Computer Science, Math</h5>
                         </div>
                     </div>
@@ -351,26 +353,16 @@
                     <a href="https://www.linkedin.com/in/chandlerlucius"
                         target="_blank">linkedin.com/in/chandlerlucius</a>
                 </div>
-                <h3>Projects</h3>
-                <div class="grid-2x4 contact-content">
-                    <h4>Website</h4>
-                    <br>
-                    <a href="http://www.chandlerlucius.com" target="_blank">chandlerlucius.com</a>
-                </div>
-                <div class="grid-2x4 contact-content">
-                    <h4>Odysi</h4>
-                    <br>
-                    <a href="https://www.myodysi.com" target="_blank">odysi.com</a>
-                </div>
+                <h3>Github</h3>
                 <div class="grid-2x4 contact-content">
                     <h4>Linux Dashboard</h4>
                     <br>
-                    <a href="https://www.linuxdashboard.com:8443" target="_blank">linuxdashboard.com</a>
+                    <a href="https://github.com/chandlerlucius/linux-dashboard" target="_blank">github.com/chandlerlucius/linux-dashboard</a>
                 </div>
                 <div class="grid-2x4 contact-content">
-                    <h4>Github</h4>
+                    <h4>Personal Website Template</h4>
                     <br>
-                    <a href="https://www.github.com/chandlerlucius" target="_blank">github.com/chandlerlucius</a>
+                    <a href="https://github.com/chandlerlucius/personal-website-template" target="_blank">personal-website-template</a>
                 </div>
                 <h3>Skills</h3>
                 <h4>Languages</h4>
@@ -384,6 +376,13 @@
                     <li>HTML5/CSS3</li>
                     <li>Spring/Spring Boot</li>
                 </ul>
+                <h4>Testing</h4>
+                <ul>
+                    <li>JUnit</li>
+                    <li>Selenium</li>
+                    <li>Jest</li>
+                    <li>BATS</li>
+                </ul>
                 <h4>Source Control</h4>
                 <ul>
                     <li>Git/Github/Gitlab</li>
@@ -392,7 +391,7 @@
                 <ul>
                     <li>Maven/Ant/Gradle</li>
                 </ul>
-                <h4>Deploy Tools</h4>
+                <h4>CI/Deploy Tools</h4>
                 <ul>
                     <li>Jenkins/Travis</li>
                 </ul>
@@ -403,13 +402,9 @@
                 <h4>Dev Ops</h4>
                 <ul>
                     <li>Linux CLI</li>
-                    <li>Basic Server Config (linux)</li>
-                    <li>Basic Security Config (http2/ciphers/certs)</li>
-                </ul>
-                <h4>Testing</h4>
-                <ul>
-                    <li>JUnit</li>
-                    <li>Selenium</li>
+                    <li>Linux System Administration</li>
+                    <li>HTTP Server Administration</li>
+                    <li></li>
                 </ul>
             </div>
         </div>
