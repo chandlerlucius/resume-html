@@ -12,20 +12,6 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
     <style>
-        @page {
-            size: letter;
-            margin: 0;
-        }
-
-        @media print {
-            #content {
-                width: 215mm;
-                height: 279mm;
-                margin: 0;
-                box-shadow: none;
-            }
-        }
-
         html,
         body {
             margin: 0;
@@ -174,6 +160,20 @@
 
         .detail-content:last-child>div>ul {
             padding-bottom: 0;
+        }
+        
+        @page {
+            size: letter;
+            margin: 0;
+        }
+
+        @media print {
+            #content {
+                width: 215mm;
+                height: 279mm;
+                margin: 0;
+                box-shadow: none;
+            }
         }
     </style>
 </head>
