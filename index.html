@@ -50,7 +50,9 @@
             margin-bottom: 10px;
         }
 
-        h4,h5 {
+        h4,
+        h5,
+        h6 {
             text-align: justify;
             margin: 0;
         }
@@ -59,13 +61,18 @@
             padding-bottom: 5px;
         }
 
+        h6 {
+            font-style: italic;
+            font-weight: bold;
+        }
+
         .grid-2x4 {
             display: grid;
             align-items: center;
             justify-items: start;
             grid-template-columns: 1fr 15fr;
         }
-        
+
         .grid-4x4 {
             grid-template-columns: 1fr 10fr 1fr 10fr;
         }
@@ -139,8 +146,10 @@
             height: 100%;
             border-bottom: 2px solid #888888;
         }
-        
-        .grid-2x4 div:nth-child(3) {
+
+        .grid-2x4 div:nth-child(3),
+        .grid-4x4 div:nth-child(5),
+        .grid-4x4 div:nth-child(7) {
             border-top: 2px solid #888888;
         }
 
@@ -158,6 +167,10 @@
             font-weight: bold;
         }
 
+        .detail-content>div>h5 {
+            white-space: pre-wrap;
+        }
+
         .detail-content>div>ul {
             padding-left: 15px;
             margin: 0;
@@ -167,7 +180,7 @@
         .detail-content:last-child>div>ul {
             padding-bottom: 0;
         }
-        
+
         @page {
             size: letter;
             margin: 0;
@@ -201,7 +214,11 @@
                     </div>
                     <div class="detail-content">
                         <div>
-                            <h5>Proprietary</h5>
+                            <h5>Private</h5>
+                            <br />
+                            <h6>HTML</h6>
+                            <h6>JS</h6>
+                            <h6>Java</h6>
                         </div>
                         <div>
                             <h4>Odysi</h4>
@@ -218,14 +235,18 @@
                     </div>
                     <div class="detail-content">
                         <div>
-                            <h5>Open Source</h5>
+                            <h5>Public</h5>
+                            <br />
+                            <h6>HTML</h6>
+                            <h6>JS</h6>
+                            <h6>Bash</h6>
                         </div>
                         <div>
                             <h4>Linux Dashboard</h4>
                             <a href="https://www.linuxdashboard.com" target="_blank">linuxdashboard.com</a>
                             <ul>
                                 <li>
-                                    <h5>Simple, fast, server analytics.</h5>
+                                    <h5>Simple, fast, server analytics for your linux machine.</h5>
                                 </li>
                             </ul>
                         </div>
@@ -235,31 +256,37 @@
                     </div>
                     <div class="detail-content">
                         <div>
-                            <h5>Open Source</h5>
-                        </div>
-                        <div>
-                            <h4>Personal Website Template</h4>
-                            <a href="https://www.chandlerlucius.com" target="_blank">chandlerlucius.com</a>
-                            <ul>
-                                <li>
-                                    <h5>Showcase your resume in website form.</h5>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="line-content">
-                        <hr width="1">
-                    </div>
-                    <div class="detail-content">
-                        <div>
-                            <h5>Open Source</h5>
+                            <h5>Public  </h5>
+                            <br />
+                            <h6>React</h6>
+                            <h6>Golang</h6>
                         </div>
                         <div>
                             <h4>What's For Lunch</h4>
                             <a href="https://www.whatsforlunch.dev" target="_blank">whatsforlunch.dev</a>
                             <ul>
                                 <li>
-                                    <h5>Location voting platform with basic chat abilities.</h5>
+                                    <h5>Location voting platform with chat capabilities.</h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="line-content">
+                        <hr width="1">
+                    </div>
+                    <div class="detail-content">
+                        <div>
+                            <h5>Public</h5>
+                            <br />
+                            <h6>HTML</h6>
+                            <h6>PHP</h6>
+                        </div>
+                        <div>
+                            <h4>Website Template</h4>
+                            <a href="https://www.chandlerlucius.com" target="_blank">chandlerlucius.com</a>
+                            <ul>
+                                <li>
+                                    <h5>Showcase your resume in website form.</h5>
                                 </li>
                             </ul>
                         </div>
@@ -283,22 +310,31 @@
                             <ul>
                                 <li>
                                     <h5>
-                                        Implemented an archiving tool in java to capture a flat file example of a web application during runtime. Following user interaction the tool would capture the result of each cached request path, store it in an html representation, and bundle it with the necessary resources in a zip file. The process ran in it's own thread to not interrupt the user.
+                                        Implemented an archiving tool in java to capture a flat file example of a web
+                                        application during runtime. Following user interaction the tool would capture
+                                        the result of each cached request path, store it in an html representation, and
+                                        bundle it with the necessary resources in a zip file. The process ran in it's
+                                        own thread to not interrupt the user.
                                     </h5>
                                 </li>
                                 <li>
                                     <h5>
-                                        Increased the speed, performance, and robustness of testing suite by introducing embedded tomcat, overriding selenium/htmlunit drivers, adding 20% more tests, and refactoring entire suite.
+                                        Increased the speed, performance, and robustness of testing suite by introducing
+                                        embedded tomcat, overriding selenium/htmlunit drivers, adding 20% more tests,
+                                        and refactoring entire suite.
                                     </h5>
                                 </li>
                                 <li>
                                     <h5>
-                                        Created a series of bash script/cron jobs to monitor 50+ production servers. The scripts aggregated various linux, tomcat, java, and backup analytics in a json format.
+                                        Created a series of bash script/cron jobs to monitor 50+ production servers. The
+                                        scripts aggregated various linux, tomcat, java, and backup analytics in a json
+                                        format.
                                     </h5>
                                 </li>
                                 <li>
                                     <h5>
-                                        Architected & configured various production linux servers running tomcat/nginx web applications from the ground up.
+                                        Architected & configured various production linux servers running tomcat/nginx
+                                        web applications from the ground up.
                                     </h5>
                                 </li>
                             </ul>
@@ -319,7 +355,10 @@
                             <ul>
                                 <li>
                                     <h5>
-                                        Designed and developed an application in Java that could connect to an SFTP or FTPS server, extract files from the server, parse the extracted files, validate data on the files, and upload changes to the files as well as create log files on the server.
+                                        Designed and developed an application in Java that could connect to an SFTP or
+                                        FTPS server, extract files from the server, parse the extracted files, validate
+                                        data on the files, and upload changes to the files as well as create log files
+                                        on the server.
                                     </h5>
                                 </li>
                             </ul>
